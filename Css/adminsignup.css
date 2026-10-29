@@ -1,0 +1,184 @@
+/* General Styles */
+body, p {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Full viewport height */
+    transition: opacity 0.3s ease;
+    margin:70px auto;
+}
+
+.container.transparent {
+  opacity: 0.5;
+  pointer-events: none; /* Disable interactions with the container when transparent */
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    color: #6a1b9a;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+/* Form Styles */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.container input[type=text],
+.container input[type=password],
+.container input[type=email],
+.container input[type=tel] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid #6a1b9a;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.container input[type=text]:focus,
+.container input[type=password]:focus,
+.container input[type=email]:focus,
+.container input[type=tel]:focus {
+    border-color: #4a148c;
+    outline: none;
+}
+
+/* Button Styles */
+button.submit {
+    background-color: #6a1b9a;
+    border: none;
+    padding: 16px;
+    padding-top:10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button.submit:hover {
+    background-color: #4a148c;
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+button.submit:active {
+    transform: scale(0.98); /* Button shrinks slightly on click */
+}
+
+/* Additional Styles */
+input::placeholder {
+    color: #aaa;
+    font-size: 14px;
+    font-family:monospace;
+}
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #000000;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.menu-header {
+    padding: 10px;
+    background: #e6e4e4;
+    color: #000;
+    text-align: center;
+}
+
+.menu-content {
+    padding: 10px;
+}
+
+.top-bar.box {
+    display: flex;
+    justify-content: center; /* Center the middle section (logo) */
+    align-items: center;
+    padding: 5px;
+    max-width: 100%;
+    height: 60px;
+    background-color: #f9f9f9;
+    position: relative;
+  }
+  
+  .svg {
+    color: black;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .image {
+    width: 50px;
+  }
+  
+  /* Left section (menu icon) */
+  .top-bar.left {
+    position: absolute;
+    left: 100px; /* Adjust the value to control how close it is to the left edge */
+  }
+  
+  /* Right section (logout icon) */
+  .top-bar.right {
+    position: absolute;
+    right: 100px; /* Adjust the value to control how close it is to the right edge */
+  }
+  

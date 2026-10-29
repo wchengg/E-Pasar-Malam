@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Container Styles */
+.container {
+  max-width: 700px;
+  margin:43px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.container.transparent {
+  opacity: 0.5;
+  pointer-events: none; /* Disable interactions with the container when transparent */
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+   margin-top: 0px;
+  text-decoration:underline;
+  color: #6a1b9a;
+  font-size: 28px;
+}
+
+/* Form Element Styles */
+label {
+  display: block;
+  margin:0px 0px; /* Reduced margin above and below the label */
+  font-weight: bold;
+  color: #555;
+}
+
+input, textarea,select{
+  padding-bottom:90px;
+}
+
+/* Form Element Styles */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  height:40px;
+  font-family:monospace;
+  padding: 8px; /* Reduced padding for the input fields */
+  margin: 2px 0 20px; /* Reduced margin above the input fields */
+  border: 1px solid #968888;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for form elements */
+}
+
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+  font-family:monospace;
+}
+
+/* Submit Button */
+.submit {
+  width: 100%;
+  padding: 12px;
+  margin-top:20px;
+  background-color:  #6a1b9a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for button */
+}
+
+.submit:hover {
+  background-color: #d7d7d7;
+  color: #000; /* Adjust text color on hover for better contrast */
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Side Menu */
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Added shadow for side menu */
+}
+
+.side-menu a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.side-menu a:hover {
+  background-color: #f0f0f0;
+  color: #4a148c;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Menu Header */
+.menu-header {
+  padding: 10px;
+  background-color: #e6e4e4;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Menu Content */
+.menu-content {
+  padding: 10px;
+}
+
+.top-bar.box {
+  display: flex;
+  justify-content: center; /* Center the middle section (logo) */
+  align-items: center;
+  padding: 5px;
+  max-width: 100%;
+  height: 60px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.svg {
+  color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.image {
+  width: 50px;
+}
+
+/* Left section (menu icon) */
+.top-bar.left {
+  position: absolute;
+  left: 100px; /* Adjust the value to control how close it is to the left edge */
+}
+
+/* Right section (logout icon) */
+.top-bar.right {
+  position: absolute;
+  right: 100px; /* Adjust the value to control how close it is to the right edge */
+}
+
+.svg:hover, .image:hover {
+  cursor: pointer;
+}
+
+/* Placeholder Styles */
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for placeholders */
+    color: #aaa; /* Placeholder text color */
+}

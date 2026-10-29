@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="../Css/login2.css">
+</head>
+<body>
+    <div class="content">
+        <div class="logo-container">
+            <img src="../Picture/logo2.png" class="logo">
+        </div>
+        <h2>Welcome to E-Pasar Malam SS2</h2>
+        <button class="loginnow" onclick="showModal('id01')">Login now ! </button>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="login.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="closeModal('id01')" class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username:</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password:</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                <button class="submit" type="submit">Login</button>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <span class="signup">Not a member yet? <a href="#" onclick="showModal('id02')">Sign up</a></span>
+            </div>
+        </form>
+    </div>
+
+    <!-- Sign-Up Modal -->
+    <div id="id02" class="modal">
+        <form class="modal-content animate" action="signup.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="closeModal('id02')" class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <input type="hidden" name="id" id="id">
+
+                <label for="fullname"><b>Full Name:</b></label>
+                <input type="text" placeholder="Enter Full Name" name="fullname" required>
+
+                <label for="contact"><b>Contact Number:</b></label>
+                <input type="tel" placeholder="Enter Contact Number" name="contact" required>
+
+                <label for="email"><b>Email:</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
+
+                <label for="username"><b>Username:</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+
+                <label for="password"><b>Create a Password:</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <label for="confirm_password"><b>Re-enter Password:</b></label>
+                <input type="password" placeholder="Re-enter Password" name="confirm_password" required>
+
+                <label for="dob"><b>Date of Birth:</b></label>
+                <input type="date" name="dob">
+
+                <input type="hidden" name="created_time" id="created_time">
+                
+                <button class="submit" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+Array
+(
+    [pickup_time] => 19:56
+    [payment_method] => cod
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Terrarium 1
+                    [price] => 108
+                    [quantity] => 1
+                    [image] => https://imgtr.ee/images/2024/08/19/1bcdc5e71e28058f0caac6a118186745.jpeg
+                )
+
+            [1] => Array
+                (
+                    [title] => Peace Lily
+                    [price] => 22.9
+                    [quantity] => 1
+                    [image] => https://imgtr.ee/images/2024/08/19/9ac70e2563a8e039b97da1843a6741f2.jpeg
+                )
+
+            [2] => Array
+                (
+                    [title] => Pink Rose
+                    [price] => 20
+                    [quantity] => 1
+                    [image] => https://imgtr.ee/images/2024/08/19/ff81fb39d27302aa167cc3446c284b0d.jpeg
+                )
+
+        )
+
+)
+Array
+(
+    [pickup_time] => 19:57
+    [payment_method] => cod
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Terrarium 1
+                    [price] => 108
+                    [quantity] => 1
+                    [image] => https://imgtr.ee/images/2024/08/19/1bcdc5e71e28058f0caac6a118186745.jpeg
+                )
+
+            [1] => Array
+                (
+                    [title] => Peace Lily
+                    [price] => 22.9
+                    [quantity] => 1
+                    [image] => https://imgtr.ee/images/2024/08/19/9ac70e2563a8e039b97da1843a6741f2.jpeg
+                )
+
+            [2] => Array
+                (
+                    [title] => Pink Rose
+                    [price] => 20
+                    [quantity] => 1
+                    [image] => https://imgtr.ee/images/2024/08/19/ff81fb39d27302aa167cc3446c284b0d.jpeg
+                )
+
+        )
+
+    [name] => Yap Wan Cheng
+    [contact_number] => 01121318867
+)
+Array
+(
+    [pickup_time] => 20:04
+    [payment_method] => cod
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Crispy - 5pcs
+                    [price] => 17
+                    [quantity] => 1
+                    [image] => https://i.imgur.com/i1eLtFG.jpeg
+                )
+
+        )
+
+    [name] => Yap Wan Cheng
+    [contact_number] => 01121318867
+)
+Array
+(
+    [pickup_time] => 20:02
+    [payment_method] => cod
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Crispy - 5pcs
+                    [price] => 17
+                    [quantity] => 1
+                    [image] => https://i.imgur.com/i1eLtFG.jpeg
+                )
+
+        )
+
+    [name] => Yap Wan Cheng
+    [contact_number] => 01121318867
+)

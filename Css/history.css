@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-history .order {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .order p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .status {
+    font-weight: bold;
+    color: #28a745;
+  }
+  

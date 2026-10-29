@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+
+
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Order History Styling */
+.order-history-list {
+  margin-top: 20px;
+}
+
+.order-card {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.order-card h2 {
+  color:  #ff5722;
+  margin-top:0px;
+  margin-bottom:5px;
+}
+
+.order-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.order-card h3 {
+  margin-top: 20px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order-items{
+padding-left:0px;
+}
+
+.item-details{
+width:100%;
+}
+.order-item img {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.item-title {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.item-quantity {
+  margin-left: 10px;
+}
+
+.item-remarks {
+  margin-left: 15px;
+  color: #777;
+}
+
+.transparent {
+  opacity: 0.5;
+}
+
+
+.top-bar.box {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  max-width: 100%;
+  height: 60px;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.top-bar.mid {
+  margin: 120px;
+}
+
+.svg {
+  color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.image {
+  width: 50px;
+}
+
+
+/* Side Menu */
+.side-menu {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #f9f9f9;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.side-menu a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #000000;
+display: block;
+transition: 0.3s;
+}
+
+.side-menu a:hover {
+color: #000000;
+}
+
+.side-menu .close-btn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+.menu-header {
+padding: 10px;
+background: #e6e4e4;
+color: #000;
+text-align: center;
+}
+
+.menu-content {
+padding:Â 10px;
+}
+.container {
+  width: 300px;
+  height: 690px; /* Set a fixed height instead of max-height */
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  overflow: auto; /* Add overflow property if needed */
+}
+
+
+.back-button {
+display: flex;
+gap:20px;
+align-items: center; 
+margin-left: 20px;
+}
+
+.back-button img {
+width: 40px;
+  margin-top:10px;
+}
+
+.button h1 {
+margin-left: 10px;
+}
+
+  h1{
+    margin-bottom:0px;
+    margin-top:0px;
+  }
+
+.box {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+}
+
+.total-amount {
+  font-weight: bold; 
+  text-align:right;
+}
+
+.order-status{
+font-weight:bold;
+}
+
+.price{
+margin-top:10px;
+text-align:right;
+}
+
+.item-remarks{
+margin-left:0px;
+}
+
+/* Search Bar Styles */
+.search-form {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.search-form input[type="text"] {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-form .search-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Status colors */
+.item-status-decline {
+  color: red;
+}
+
+.item-status-ready {
+  color: green;
+}
+
+.status-default {
+  color: #000; /* Default color for other statuses */
+}
+
+.order-card.completed {
+  background-color:#dddddd;
+  pointer-events: none; 
+  opacity: 0.6; 
+}
+
+.order-card.completed .order-actions {
+  display: none; 
+}

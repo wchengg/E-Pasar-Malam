@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../Css/stall1.css">
+  <title>Products</title>
+  <style>
+    .checkout-button {
+      background-color: #ff5722;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px; /* Ensure this matches across your pages */
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="top-bar box">
+    <div class="top-bar left">
+      <img src="../Picture/menuBar.svg" class="menuBar svg">
+    </div>
+    <div class="top-bar mid">
+      <img src="../Picture/logo2.png" class="logo image">
+    </div>
+    <div class="top-bar right">
+      <img src="../Picture/logout.svg" class="profile svg">
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- Back Button -->
+    <div class="back-button">
+      <a href="../Html/shops.html" class="back-link"><img src="../Picture/back-icon.png" class="back-icon"></a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="container">
+        <div class="product-header">
+          <img src="../Picture/1apam.jpg" alt="Header Image" class="header-image">
+          <div class="product-details">
+            <h1>Soon Apam Balik</h1>
+            <p class="category">Apam Balik</p>
+            <p class="rating">⭐ 4.7 (24 Reviews)</p>
+            <p class="arrival-time">Pick up in 8 mins</p>
+          </div>
+        </div>
+
+        <div class="products">
+          <div class="product-item" data-price="17.00">
+            <img src="../Picture/1crispy.jpg" alt="Product 1" class="product-image">
+            <div class="product-info">
+              <h2>Crispy - 5pcs</h2>
+              <p>43 sold</p>
+              <p class="price">RM17.00</p>
+            </div>
+            <div class="cart-controls">
+              <button class="add-to-cart" onclick="openPopup(this, '../Picture/1crispy.jpg', 'Crispy - 5pcs', 17.00)">+</button>
+            </div>
+          </div>
+          
+          <div class="product-item" data-price="18.00">
+            <img src="../Picture/1corn.jpg" alt="Product 2" class="product-image">
+            <div class="product-info">
+              <h2>Peanut corn - 5pcs</h2>
+              <p>104 sold</p>
+              <p class="price">RM18.00</p>
+            </div>
+            <div class="cart-controls">
+              <button class="add-to-cart" onclick="openPopup(this, '../Picture/1corn.jpg', 'Peanut corn - 5pcs', 18.00)">+</button>
+            </div>
+          </div>
+
+          <div class="product-item" data-price="17.00">
+            <img src="../Picture/1peanut.jpg" alt="Product 3" class="product-image">
+            <div class="product-info">
+              <h2>Peanut - 5pcs</h2>
+              <p>48 sold</p>
+              <p class="price">RM17.00</p>
+            </div>
+            <div class="cart-controls">
+              <button class="add-to-cart" onclick="openPopup(this, '../Picture/1peanut.jpg', 'Peanut - 5pcs', 17.00)">+</button>
+            </div>
+          </div>
+          <!-- Repeat for other products as needed -->
+        </div>
+      </div>
+
+      <div class="view-cart">
+        <p id="cart-total">RM0.00</p>
+        <a href="../Html/checkout.html" class="checkout-link">
+          <button class="checkout-button">Checkout</button>
+        </a>
+      </div>
+    </div>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img id="popup-image" src="" alt="Product Image">
+        <h2 id="popup-title">Product Title</h2>
+        <p id="popup-price">RM0.00</p>
+        <textarea id="popup-remarks" placeholder="Add any remarks..."></textarea>
+        <div class="cart-controls">
+          <button onclick="changeQuantityPopup(-1)">-</button>
+          <span id="popup-quantity">1</span>
+          <button onclick="changeQuantityPopup(1)">+</button>
+        </div>
+        <button class="add-to-cart-popup" onclick="addToCartFromPopup()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cart variables
+      let cartTotal = 0;
+      let itemCount = 0;
+      let currentPrice = 0;
+      let currentQuantity = 1;
+      let currentButton = null;
+      let currentImage = '';
+      let currentTitle = '';
+
+      function openPopup(button, image, title, price) {
+        currentButton = button;
+        currentPrice = price;
+        currentImage = image;
+        currentTitle = title;
+        document.getElementById('popup-image').src = image;
+        document.getElementById('popup-title').innerText = title;
+        document.getElementById('popup-price').innerText = `RM${price.toFixed(2)}`;
+        document.getElementById('popup-quantity').innerText = 1;
+        document.getElementById('popup-remarks').value = "";
+        document.getElementById('popup').style.display = 'flex';
+      }
+
+      function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+      }
+
+      function changeQuantityPopup(change) {
+        currentQuantity += change;
+        if (currentQuantity < 1) currentQuantity = 1;
+        document.getElementById('popup-quantity').innerText = currentQuantity;
+        document.getElementById('popup-price').innerText = `RM${(currentPrice * currentQuantity).toFixed(2)}`;
+      }
+
+      function addToCartFromPopup() {
+        closePopup();
+        const parent = currentButton.closest('.cart-controls');
+        let quantity = currentQuantity;
+
+        parent.innerHTML = `
+          <button onclick="changeQuantity(this, ${currentPrice}, -1)" data-image="${currentImage}" data-title="${currentTitle}">-</button>
+          <span class="quantity">${quantity}</span>
+          <button onclick="changeQuantity(this, ${currentPrice}, 1)" data-image="${currentImage}" data-title="${currentTitle}">+</button>
+        `;
+        parent.setAttribute('data-quantity', quantity);
+        
+        cartTotal += currentPrice * currentQuantity;
+        itemCount += currentQuantity;
+        updateCart();
+
+        // Store cart data in localStorage
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push({ title: currentTitle, price: currentPrice, quantity: currentQuantity });
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      }
+
+      function changeQuantity(button, price, change) {
+        const parent = button.closest('.cart-controls');
+        let quantity = parseInt(parent.getAttribute('data-quantity'));
+        
+        quantity += change;
+
+        if (quantity <= 0) {
+          parent.innerHTML = `<button class="add-to-cart" onclick="openPopup(this, '${button.dataset.image}', '${button.dataset.title}', ${price})">+</button>`;
+          cartTotal -= price;
+          itemCount--;
+        } else {
+          parent.querySelector('.quantity').innerText = quantity;
+          cartTotal += price * change;
+          itemCount += change;
+          parent.setAttribute('data-quantity', quantity);
+        }
+
+        updateCart();
+
+        // Update cart data in localStorage
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        let itemIndex = cartItems.findIndex(item => item.title === button.dataset.title);
+        if (itemIndex >= 0) {
+          cartItems[itemIndex].quantity = quantity;
+        }
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      }
+
+      function updateCart() {
+        document.getElementById('cart-total').innerText = `RM${cartTotal.toFixed(2)} (${itemCount} items)`;
+      }
+
+  </script>
+  
+  
+</body>
+</html>

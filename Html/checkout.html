@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../Css/checkout.css">
+  <title>Checkout</title>
+</head>
+<body>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="../Html/stalls.html" class="back-link">← Back</a>
+  </div>
+
+  <div class="container">
+    <h1>Checkout</h1>
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="order-item">
+        <p>Croffle O'clock</p>
+        <p>RM15.60</p>
+      </div>
+      <!-- Repeat for other items -->
+      <div class="order-total">
+        <p>Total: RM15.60</p>
+      </div>
+    </div>
+    <div class="pickup-details">
+      <h2>Pickup Details</h2>
+      <form id="checkout-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <label for="pickup-time">Preferred Pickup Time:</label>
+        <input type="time" id="pickup-time" name="pickup-time" required>
+        
+        <h2>Payment Method</h2>
+        <label for="payment-method">Choose Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <!-- Add more payment options if needed -->
+        </select>
+        
+        <button type="submit" class="pay-button">Pay RM15.60</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Popup -->
+  <div id="success-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>Payment Successful!</h2>
+      <p>Your order has been successfully placed. You will receive a confirmation shortly.</p>
+      <button onclick="redirectToConfirmation()">OK</button>
+    </div>
+  </div>
+
+  <script>
+    function showSuccessPopup() {
+      document.getElementById('success-popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('success-popup').style.display = 'none';
+    }
+
+    function redirectToConfirmation() {
+      window.location.href = 'order-confirmation.html'; // Redirect to order confirmation page
+    }
+
+    document.getElementById('checkout-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual form submission
+      showSuccessPopup(); // Show success popup
+    });
+  </script>
+</body>
+</html>

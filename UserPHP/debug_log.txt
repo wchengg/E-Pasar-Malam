@@ -1,0 +1,16 @@
+{
+    "name": "Yap Wan Cheng",
+    "contact_number": "01121318867",
+    "pickup_time": "23:41",
+    "payment_method": "cod",
+    "items": [
+        {
+            "title": "Original Chili Sauce - 4pcs",
+            "price": 9.5,
+            "quantity": 1,
+            "image": "https:\/\/i.imgur.com\/KHkRWLC.jpeg",
+            "item_id": "1",
+            "remarks": "lalalalalalalal"
+        }
+    ]
+}

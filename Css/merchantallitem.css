@@ -1,0 +1,150 @@
+/* General Styles */
+body, p {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background: #fff;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    overflow-x: auto; /* Ensure container can scroll horizontally */
+      transition: opacity 0.3s ease;
+}
+
+.container.transparent {
+    opacity: 0.5;
+    pointer-events: none; /* Disable interactions with the container when transparent */
+}
+
+/* New Styles for Table Container */
+.table_wrapper {
+    overflow-x: auto; /* Allows horizontal scrolling */
+    overflow-y: hidden; /* Hides vertical scrollbar */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+    margin-top: 20px; 
+    margin-bottom: 20px; /* Space above the table */
+    background-color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Allows columns to adjust width */
+}
+
+table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+table th, table td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 8px;
+    padding-left: 8px;
+    text-align: left;
+    border-bottom: 1px solid #968888;
+}
+
+table th {
+    background-color: #00796b; 
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f2f2f2;
+}
+
+
+table td a {
+    color: #4376ad;
+    text-decoration: none;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #000000;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.menu-header {
+    padding: 10px;
+    background: #e6e4e4;
+    color: #000;
+    text-align: center;
+}
+
+.menu-content {
+    padding: 10px;
+}
+
+.top-bar.box {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  max-width: 100%;
+  height: 60px;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.top-bar.mid {
+  margin: 120px;
+}
+
+.svg {
+  color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.image {
+  width: 50px;
+}
+
+.svg:hover, .image:hover {
+    cursor: pointer;
+}
+

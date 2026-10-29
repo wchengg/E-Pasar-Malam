@@ -1,0 +1,419 @@
+/* Reset some default styles */
+body, h1, h2, p, a, button, textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Overall page styling */
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.content{
+  padding-bottom: 40px; /* Ensures content is not hidden behind the fixed view cart section */
+
+}
+
+.container.transparent {
+  opacity: 0.5;
+  pointer-events: none; /* Disable interactions with the container when transparent */
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.top-bar.box{
+  display:flex;
+  justify-content:center;
+  padding:5px;
+  max-width:100%;
+  height:60px;
+  align-items:center;
+}
+
+.top-bar.mid{
+  margin:120px;
+}
+
+
+.svg{
+  color:black;
+  width:30px;
+  height:30px;
+}
+
+.image{
+  width: 50px;
+}
+
+.back-icon{
+  width:40px;
+}
+/* Back button styling */
+.back-button {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  padding-top:5px;
+  /* background-color: #ff6f41; */
+  z-index: 1000;
+}
+
+.back-link {
+  font-size: 16px;
+  font-weight:bold;
+  color:white;
+}
+
+.container {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  /* margin: 10px auto; */
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Product header styling */
+.product-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-image {
+  width: 100%;
+  height: 200px;
+  border-radius:10px;
+  object-fit: fill;
+}
+
+.product-details {
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.product-details h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.category {
+  color: #666;
+  font-size: 14px;
+}
+
+.rating {
+  display: inline-block;
+  margin-top: 5px;
+  color: #ff9800; /* Adds color to the rating */
+}
+
+.arrival-time {
+  margin-top: 5px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Products styling */
+.products {
+  margin-top: 20px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid #b0acac;
+}
+
+.product-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.product-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+}
+
+.add-to-cart {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cart-controls button {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.cart-controls .quantity {
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+/* View cart styling */
+.view-cart {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00796b;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.checkout-button {
+  background-color: #fff;
+  background-color: #00796b;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* Side Menu */
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.side-menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-menu a:hover {
+  color: #000000;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menu-header {
+  padding: 10px;
+  background: #e6e4e4;
+  color: #000;
+  text-align: center;
+}
+
+.menu-content {
+  padding: 10px;
+}
+
+/* Side Menu */
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.side-menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-menu a:hover {
+  color: #000000;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menu-header {
+  padding: 10px;
+  background: #e6e4e4;
+  color: #000;
+  text-align: center;
+}
+
+.menu-content {
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Popup styling */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 330px;
+  width: 90%;
+  text-align: center;
+  position: relative; /* Needed for the close button positioning */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup img {
+width:95%;
+height: 180px;
+object-fit: fill;
+}
+
+.popup h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333; /* Text color */
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form rows */
+}
+
+.popup .form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between label and input */
+  justify-content: space-between; /* Space out the label and input */
+}
+
+.popup label {
+  font-size: 14px;
+  color: #666; /* Lighter text color */
+  width: 40%; /* Adjust as needed for label width */
+  text-align: right; /* Align text to the right */
+}
+
+.popup input[type="text"],
+.popup input[type="number"],
+.popup textarea {
+  width: 100%; /* Adjust as needed for input width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.popup button {
+  background-color:#00796b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup button:hover {
+  background-color:  #00796b;
+}
+
+button{
+  background-color: #00796b;
+}

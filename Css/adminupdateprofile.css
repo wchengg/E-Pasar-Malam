@@ -1,0 +1,191 @@
+body,p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+.container {
+    width: 90%;
+    margin: 20px auto;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 700px;
+    height:550px;
+    background: #fff;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+}
+
+.container.transparent {
+opacity: 0.5;
+pointer-events: none; /* Disable interactions with the container when transparent */
+}
+
+/* Profile Container */
+.profile_container {
+    padding: 20px;
+}
+
+h1 {
+  font-size: 28px;
+    color: #6a1b9a;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-decoration:underline;
+}
+
+.form_container {
+    width: 100%;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6a1b9a;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid  #9b9b9b;
+    border-radius: 4px;
+  font-family:monospace;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color:#6a1b9a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+     margin-top: 10px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #774297;
+}
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #000000;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.menu-header {
+    padding: 10px;
+    background: #e6e4e4;
+    color: #000;
+    text-align: center;
+}
+
+.menu-content {
+    padding: 10px;
+}
+
+.top-bar.box {
+  display: flex;
+  justify-content: center; /* Center the middle section (logo) */
+  align-items: center;
+  padding: 5px;
+  max-width: 100%;
+  height: 60px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.svg {
+  color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.image {
+  width: 50px;
+}
+
+/* Left section (menu icon) */
+.top-bar.left {
+  position: absolute;
+  left: 100px; /* Adjust the value to control how close it is to the left edge */
+}
+
+/* Right section (logout icon) */
+.top-bar.right {
+  position: absolute;
+  right: 100px; /* Adjust the value to control how close it is to the right edge */
+}
+
+.back-button {
+  position: absolute;
+  margin-top:20px;
+  margin-left:20px;
+}
+
+.back-button img {
+  width: 40px;
+}
+
+.password-container {
+  position: relative; 
+  width: 100%; 
+}
+
+
+
+.toggle-password {
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute; 
+  top: 30%;
+  transform: translateY(-50%); 
+  right: 10px; 
+  z-index: 1; 
+}
+
+#hide-icon {
+  display: none; }

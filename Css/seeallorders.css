@@ -1,0 +1,218 @@
+body, p  {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+  }
+  
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background: #fff;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    overflow-x: auto;
+}
+
+.container.transparent {
+    opacity: 0.5;
+    pointer-events: none; /* Disable interactions with the container when transparent */
+}
+
+/* New Styles for Table Container */
+.table_wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added lighter shadow for a smoother look */
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.table_container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #968888;
+    word-wrap: break-word; /* Ensure long text breaks correctly */
+}
+
+table th {
+    background-color: #6a1b9a;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f2f2f2;
+}
+
+table td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for Edit Links */
+.edit-link {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+}
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Added shadow for side menu */
+    }
+    
+    .side-menu a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .side-menu a:hover {
+    background-color: #f0f0f0;
+    color: #4a148c;
+    }
+    
+    .side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+    color: #333;
+    }
+    
+    /* Menu Header */
+    .menu-header {
+    padding: 10px;
+    background-color: #e6e4e4;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    }
+    
+    /* Menu Content */
+    .menu-content {
+    padding: 10px;
+    }
+    
+    .top-bar.box {
+        display: flex;
+        justify-content: center; /* Center the middle section (logo) */
+        align-items: center;
+        padding: 5px;
+        max-width: 100%;
+        height: 60px;
+        background-color: #f9f9f9;
+        position: relative;
+      }
+      
+      .svg {
+        color: black;
+        width: 30px;
+        height: 30px;
+      }
+      
+      .image {
+        width: 50px;
+      }
+      
+      /* Left section (menu icon) */
+      .top-bar.left {
+        position: absolute;
+        left: 100px; /* Adjust the value to control how close it is to the left edge */
+      }
+      
+      /* Right section (logout icon) */
+      .top-bar.right {
+        position: absolute;
+        right: 100px; /* Adjust the value to control how close it is to the right edge */
+      }
+      
+
+/* Column Widths */
+table th:nth-child(1), table td:nth-child(1) { /* Shop ID */
+    width: 80px;
+}
+
+table th:nth-child(2), table td:nth-child(2) { /* Shop Name */
+    width: 150px;
+}
+
+table th:nth-child(3), table td:nth-child(3) { /* Shop Category */
+    width: 150px;
+}
+
+table th:nth-child(4), table td:nth-child(4) { /* Description */
+    width: 200px;
+}
+
+table th:nth-child(5), table td:nth-child(5) { /* Rating */
+    width: 120px;
+}
+
+table th:nth-child(6), table td:nth-child(6) { /* Picture */
+    width: 150px;
+}
+
+table th:nth-child(7), table td:nth-child(7) { /* Merchant ID */
+    width: 120px;
+}
+
+table th:nth-child(8), table td:nth-child(8) { /* Shop Time */
+    width: 150px;
+}
+
+table th:nth-child(9), table td:nth-child(9) { /* Created Time */
+    width: 180px;
+}
+
+table th:nth-child(10), table td:nth-child(10) { /* Agent */
+    width: 120px;
+}
+
+table th:nth-child(11), table td:nth-child(11) { /* Actions */
+    width: 120px;
+}

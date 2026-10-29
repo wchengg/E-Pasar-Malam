@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../Css/cart.css">
+  <title>Cart</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Cart</h1>
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="product1.jpg" alt="Product Image">
+        <div class="item-details">
+          <h2>Croffle O'clock</h2>
+          <p>Price: RM15.60</p>
+          <div class="quantity-controls">
+            <button onclick="updateQuantity(this, -1)">-</button>
+            <span class="quantity">1</span>
+            <button onclick="updateQuantity(this, 1)">+</button>
+          </div>
+          <button class="remove-item" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+      <!-- Repeat for other items -->
+    </div>
+    <div class="cart-total">
+      <p>Total: RM15.60</p>
+      <button class="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    function updateQuantity(button, change) {
+      const quantityElement = button.parentElement.querySelector('.quantity');
+      let quantity = parseInt(quantityElement.textContent);
+      quantity += change;
+      if (quantity < 1) quantity = 1;
+      quantityElement.textContent = quantity;
+      updateTotal();
+    }
+
+    function removeItem(button) {
+      const cartItem = button.parentElement.parentElement;
+      cartItem.remove();
+      updateTotal();
+    }
+
+    function updateTotal() {
+      let total = 0;
+      document.querySelectorAll('.cart-item').forEach(item => {
+        const price = parseFloat(item.querySelector('.item-details p').textContent.replace('Price: RM', ''));
+        const quantity = parseInt(item.querySelector('.quantity').textContent);
+        total += price * quantity;
+      });
+      document.querySelector('.cart-total p').textContent = `Total: RM${total.toFixed(2)}`;
+    }
+
+    function proceedToCheckout() {
+      window.location.href = 'checkout.html';
+    }
+  </script>
+</body>
+</html>

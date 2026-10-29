@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "ml",
+            "args": [
+                "/c",
+                "/Zd",
+                "/coff",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$msCompile"],
+            "detail": "Generated task by VS Code"
+        },
+        {
+            "label": "link",
+            "type": "shell",
+            "command": "link",
+            "args": [
+                "/subsystem:console",
+                "${fileDirname}\\${fileBasenameNoExtension}.obj"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": ["$msCompile"],
+            "detail": "Generated task by VS Code"
+        }
+    ]
+}
